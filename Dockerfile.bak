@@ -76,4 +76,4 @@ EXPOSE 3478 3478/udp
 
 VOLUME ["/var/lib/coturn"]
 
-CMD ["docker-entrypoint.sh", "--log-file=stdout", "--external-ip=$(detect-external-ip)", "--min-port=50000", "--max-port=50100"]
+CMD ["/startup.sh"]

@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  coturn:
+    image: bhkim81/coturn-docker-image:0.0.5
+    ports:
+      - 3478:3478
+      - 3478:3478/udp
+    environment:
+      - TURN_USERNAME=coturn
+      - TURN_PASSWORD=nextcoturn
+    volumes:
+    - coturn:/var/lib/coturn
+
+volumes:
+  coturn:
